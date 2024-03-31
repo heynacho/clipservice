@@ -5,21 +5,53 @@
     width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-    background-color: beige;
+    /* background-color: beige; */
 }
 
+.ticket-open,
+.web-magazine {
+    margin: 48px 0 48px;
+}
 .ticket-open h2,
 .web-magazine h2 {
     color: #000;
     text-align: center;
     margin-bottom: 60px;
 }
-
 .ranking h2,
 .stage-talk h2 {
     color: #000;
     text-align: center;
-    margin-bottom: 48px;
+    padding: 48px 0;
+}
+.ranking,
+.stage-talk {
+    background-color: #f8f8f8;
+    padding-bottom: 72px;
+ }
+ .ranking-menu,
+ .stage-talk-menu {
+    width: 620px;
+    margin: 0 auto 28px;
+}
+.ranking-menu > ul,
+.stage-talk-menu > ul {
+   display: flex;
+   justify-content: space-between;
+}
+.ranking-menu > ul > li,
+.stage-talk-menu > ul > li {
+   font-size: 24px;
+}
+.ranking-menu > ul > li > a .selected,
+.stage-talk-menu > ul > li > a .selected {
+   color: #00b7f2;
+   font-weight: bold;
+}
+.ranking-menu > ul > li > a:hover,
+.stage-talk-menu > ul > li > a:hover {
+   color: #00b7f2;
+   font-weight: bold;
 }
 
 /*===== header =====*/ 
@@ -27,7 +59,7 @@ header {
     position: relative;
     width: 100%; height: 224px;
     padding-top: 45px;
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
 }
 
 /* logo-topmenu-icon */
@@ -96,10 +128,229 @@ header {
     display: flex;
     justify-content: space-between;
 }
+.main-menu .gnb li {
+    font-size: 16px;
+}
 .main-menu .gnb li:hover {
     text-decoration: underline;
 }
-/*===== main =====*/ 
 
+
+/*===== main =====*/ 
+/* slide */
+.slide {
+    width: 1180px;
+    margin: 0 auto;
+    padding-bottom: 48px;
+}
+.slide > h2 {
+    font-size: 0;
+}
+.slide > .slide-images {
+    display: flex;
+}
+.slide > .slide-images img {
+    height: 600px;
+    margin-right: 12px;
+}
+
+/* ticket-open */
+.ticket-open .open-list  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 20px;
+}
+.ticket-open .open-list li{
+    position: relative;
+    width: 580px; height: 280px;
+    border: 1px solid #6c6c6c;
+}
+.ticket-open .open-list li img{
+    width: 198px; height: 278px;
+}
+.ticket-open .open-list li .open-txt {
+    height: 208px;
+    position: absolute;
+    top:72px; left: 232px;
+}
+.ticket-open .open-list li .open-txt time {
+    font-size: 28px;
+    font-weight: bold;
+}
+.ticket-open .open-list li .open-txt .perf-name {
+    margin-top: 36px;
+    color: #6c6c6c;
+}
+.ticket-open .open-list li .open-txt .perf-type {
+    position: absolute;
+    bottom: 40px;
+    color: #6c6c6c;
+}
+.ticket-open .open-list li .open-txt .perf-type .fixed {
+    color: #c5d825;
+}
+.ticket-open .open-list li .open-txt .perf-type .time-deal {
+    color: #f84b2f;
+}
+.ticket-open .open-list li .d-day {
+    width: 80px; height: 80px;
+    position: absolute;
+    top: 0; right: 0;
+    padding-top: 16px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    background-color: #6c6c6c;
+}
+.ticket-open .open-list li .d-day .d-date {
+    color: #00b7f2;
+    line-height: 0.8;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ /* ranking */
+.ranked-perf {
+    display: flex;
+    justify-content: space-between;
+}
+.ranked-perf > div {
+    position: relative;
+    width: 380px; height: 380px;
+    text-align: center;
+}
+.ranked-perf .ranked-num {
+    position: absolute;
+    top: 0; left: 6px;
+    margin-top: -10px;
+    /* color: #fff; */
+    font-size: 64px;
+}
+.ranked-perf img {
+    position: absolute;
+    left: 190px;
+    transform: translateX(-50%);
+    width: 200px; height: 280px;
+}
+.ranked-perf .perf-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 0 8px;
+    color: #fff;
+    background-color: #2b2b2b;
+}
+.ranked-perf .perf-info strong {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+.ranked-perf .perf-info time,
+    .ranked-perf .perf-info .place {
+    font-size: 12px;
+}
+.ranked-perf .perf-info time{
+    margin-right: 16px;
+}
+
+/* web-megazine */
+.web-magazine  .content-area {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.web-magazine .main-article {
+    width: 540px; height: 860px;
+    position: sticky;
+    top: 10px;
+}
+.web-magazine .main-article img {
+    width: 100%;
+}
+.web-magazine .sub-article {
+    width: 580px;
+}
+.web-magazine .sub-article img {
+    width: 280px;
+}
+
+/* stage-talk */
+.stage-talk .talk-box {
+    position: relative;
+    width: 1276px; height: 432px;
+    border-radius: 40px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.stage-talk .talk-box > .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 100px;
+}
+.stage-talk .talkbox-info {
+    width: 210px;
+}
+.stage-talk .talkbox-info > h3 {
+    margin-top: 32px;
+    font-size: 36px;
+    font-weight: bold;
+}
+.stage-talk .talkbox-info > p {
+    margin: 72px 0 40px;
+}
+.stage-talk .talkbox-info > a {
+    color: #c5d825;
+    text-decoration: underline;
+}
+.stage-talk .talk-content {
+    width: 740px;
+}
+.stage-talk .talk-content .hall-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 20px;
+}
+.stage-talk .talk-content .hall-list > div {
+    width: 360px; height: 142px;
+    border: 1px solid #6c6c6c;
+    border-radius: 20px;
+}
+
+.stage-talk .talk-content .hall-list a {
+    position: relative;
+    width: 336px; height: 116px;
+    margin: 12px;
+    border: 1px solid #6c6c6c;
+    border-radius: 10px;
+}
+.stage-talk .talk-content .hall-list img {
+    width: 180px;
+    border-radius: 10px;
+}
+.stage-talk .talk-content .hall-list a > strong {
+    position: absolute;
+    top: 20px; right: 8px;
+    font-size: 24px;
+    font-weight: normal;
+}
+.stage-talk .talk-content .hall-list a .hall-type {
+    position: absolute;
+    bottom: 12px; right:8px;
+}
+.stage-talk .talk-content .hall-list a .hall-type .type {
+    font-weight: bold;
+}
+.stage-talk .talk-content .hall-list a .hall-type .type1,
+.stage-talk .talk-content .hall-list a .hall-type .type2 {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.stage-talk .talk-content .hall-list a .hall-type p {
+    line-height: 1.2;
+}
+.stage-talk .talk-content .hall-list a .hall-type .small {
+    font-size: 12px;
+}
 
 /*===== footer =====*/ 
