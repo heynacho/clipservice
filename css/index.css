@@ -202,6 +202,9 @@ header {
     text-align: center;
     background-color: #6c6c6c;
 }
+.ticket-open .open-list li .today {
+    background-color: #2b2b2b;
+}
 .ticket-open .open-list li .d-day .d-date {
     color: #00b7f2;
     line-height: 0.8;
@@ -219,11 +222,26 @@ header {
     width: 380px; height: 380px;
     text-align: center;
 }
+.ranked-perf > div:first-child {
+    background: url(../images/poster_2am_bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+.ranked-perf > div:nth-child(2) {
+    background: url(../images/poster_magic\ n\ illusion_bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+.ranked-perf > div:last-child {
+    background: url(../images/poster_kennyG_bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+.ranked-perf > div:hover {
+    background-size: 135%;
+}
 .ranked-perf .ranked-num {
     position: absolute;
-    top: 0; left: 6px;
+    top: 0; left: 12px;
     margin-top: -10px;
-    /* color: #fff; */
+    color: #fff;
     font-size: 64px;
 }
 .ranked-perf img {
@@ -253,24 +271,56 @@ header {
 }
 
 /* web-megazine */
-.web-magazine  .content-area {
+.web-magazine .content-area {
     position: relative;
     display: flex;
     justify-content: space-between;
+    text-align: justify;
 }
 .web-magazine .main-article {
-    width: 540px; height: 860px;
+    width: 540px; height: 875px;
     position: sticky;
     top: 10px;
+    /* background-color: lemonchiffon; */
 }
 .web-magazine .main-article img {
-    width: 100%;
+    width: 540px; height: 760px;
+}
+.web-magazine .main-article strong {
+    margin: 16px 0;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+.web-magazine .main-article .perf-info {
+    /* position: absolute;
+    bottom: 0; */
+    color: #6c6c6c;
+    font-size: 20px;
+    letter-spacing: -1px;
 }
 .web-magazine .sub-article {
     width: 580px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 48px;
+}
+.web-magazine .sub-article > div {
+    width: 280px;
 }
 .web-magazine .sub-article img {
-    width: 280px;
+    width: 280px; height: 390px;
+}
+.web-magazine .sub-article strong {
+    margin: 8px 0;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+}
+.web-magazine .sub-article .perf-info {
+    color: #6c6c6c;
+    font-size: 10px;
+    letter-spacing: -1px;
 }
 
 /* stage-talk */
@@ -354,3 +404,6 @@ header {
 }
 
 /*===== footer =====*/ 
+footer {
+    background-color: #2b2b2b;
+}
