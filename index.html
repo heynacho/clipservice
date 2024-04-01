@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
+    <style>
+        @font-face {
+    font-family: 'InfinitySans-RegularA1';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    </style>
     <title>클립서비스</title>
 </head>
 <body>
@@ -31,12 +39,12 @@
                     <div class="mypage">
                         <a href="#">MY</a>
                     </div>
-                    <div class="search-box">
-                        <form action="#" method="post">
-                            <input type="search" id="search-bar" />
-                            <a href="#"><img src="./images/search.png" alt="search btn"></a>
-                        </form>
-                    </div> 
+                    <form action="#" method="post" class="search-box">
+                        <input type="search" name="search" id="search" class="search" />
+                        <div class="search-icon">
+                            <img src="./images/search.png" alt="search btn">
+                        </div>
+                    </form>
                 </div><!-- icon -->
             </div><!-- logo-topmenu-icon -->
 
@@ -104,7 +112,7 @@
                             <p class="perf-type">일반예매 <span class="fixed">지정석</span></p>
                         </div><!-- open-txt -->
                         <div class="d-day">
-                            <p>OPEN<br><span class="d-date">D-1</span></p>
+                            <p>OPEN<br><span class="d-date">D - 1</span></p>
                         </div>
                     </li>
                     <li class="open04">
@@ -115,7 +123,7 @@
                             <p class="perf-type"><span class="time-deal">타임특가</span> 비지정석</p>
                         </div><!-- open-txt -->
                         <div class="d-day">
-                            <p>OPEN<br><span class="d-date">D-2</span></p>
+                            <p>OPEN<br><span class="d-date">D - 2</span></p>
                         </div>
                     </li>
                 </ul><!-- open-list -->
@@ -179,50 +187,67 @@
                 <h2>웹 매거진</h2>
                 <div class="content-area">
                     <div class="main-article">
-                        <a href="#">
+                        <a href="https://themusical.co.kr/News/Detail?num=13875" target="_blank">
                             <img src="./images/poster_next to normal(big).jpg" alt="main-article-poster">
                             <strong>뮤지컬 &lt;넥스트 투 노멀&gt; 3월 개막…최정원·배해선·이건명·마이클리 캐스팅...</strong>
                             <span class="perf-info">2024.3.5.(화) ~ 2024.5.19(일)  광림아트센터 BBCH홀</span>
                         </a>
                     </div><!-- main-article -->
                     
-                    <div class="sub-article">
+                    <div class="sub-article01">
                         <div class="sub01">
-                            <a href="#">
+                            <a href="https://www.themusical.co.kr/News/Detail?num=13964" target="_blank">
                                 <img src="./images/poster_missing.jpg" alt="sub-article-poster01">
                                 <strong>연극 &lt;실종법칙&gt; 4월 개막…심완준·이형훈·노수산나·금조 출연</strong>
                                 <span class="perf-info">2024.4.10.(수) ~ 2024.5.12(일)  예술의전당 자유소극장</span>
                             </a>
                         </div>
-                        <div class="sub02">
-                            <a href="#">
-                                <img src="./images/magazine02.jpg" alt="sub-article-poster02">
-                                <strong>인터뷰 | [SPECIAL④]&lt;난설&gt; 이기쁨 연출∙정인지, 틀에 가둘 수 없는...</strong>
-                                <span class="perf-info">2024.03.12.(화) ~ 2024.06.02.(일)  YES24스테이지 2관</span>
-                            </a>
-                        </div>
                         <div class="sub03">
-                            <a href="#">
+                            <a href="https://www.themusical.co.kr/News/Detail?num=13953" target="_blank">
                                 <img src="./images/poster_the tribe.jpg" alt="sub-article-poster03">
                                 <strong>서울시뮤지컬단 신작 &lt;더 트라이브&gt; 4월 개막…강찬·김범준·서유진·김이후 출연</strong>
                                 <span class="perf-info">2024.4.19.(금) ~ 2024.5.5(일)  세종문화회관 S씨어터</span>
                             </a>
                         </div>
-                        <div class="sub04">
-                            <a href="#">
-                                <img src="./images/poster_skapin.jpg" alt="sub-article-poster04">
-                                <strong>연극 &lt;스카팽&gt; 4월 개막…전 회차 '열린 객석' 운영</strong>
-                                <span class="perf-info">2024.4.12.(화) ~ 2024.5.6(월)  국립극단 명동예술극장</span>
-                            </a>
-                        </div>
                         <div class="sub05">
-                            <a href="#">
+                            <a href="https://www.themusical.co.kr/Magazine/Detail?num=5282" target="_blank">
                                 <img src="./images/magazine05.jpg" alt="sub-article-poster05">
                                 <strong>피처 | [SPECIAL①] 우리에겐 실패하는 여성이 필요하다...</strong>
                                 <span class="perf-info">더뮤지컬 여성의 날 특집 기획   공연 칼럼니스트 장경진</span>
                             </a>
                         </div>
-                    </div><!-- sub-article -->
+                        <div class="sub07">
+                            <a href="https://www.themusical.co.kr/News/Detail?num=13986" target="_blank">
+                                <img src="./images/poster_romantic.jpg" alt="sub-article-poster07">
+                                <strong>본격 여정 돌입한 뮤지컬 &lt;낭만별곡&gt;, 시선 끄는 관전 포인트</strong>
+                                <span class="perf-info">2024.3.19(화) ~ 2024.06.09.(일)  YES24아트원 2관</span>
+                            </a>
+                        </div>
+                    </div><!-- sub-article01 -->
+
+                    <div class="sub-article02">
+                        <div class="sub02">
+                            <a href="https://www.themusical.co.kr/Magazine/Detail?num=5285" target="_blank">
+                                <img src="./images/magazine02.jpg" alt="sub-article-poster02">
+                                <strong>인터뷰 | [SPECIAL④]&lt;난설&gt; 이기쁨 연출∙정인지, 틀에 가둘 수 없는...</strong>
+                                <span class="perf-info">2024.03.12.(화) ~ 2024.06.02.(일)  YES24스테이지 2관</span>
+                            </a>
+                        </div>
+                        <div class="sub04">
+                            <a href="https://www.themusical.co.kr/News/Detail?num=13967" target="_blank">
+                                <img src="./images/poster_skapin.jpg" alt="sub-article-poster04">
+                                <strong>연극 &lt;스카팽&gt; 4월 개막…전 회차 '열린 객석' 운영</strong>
+                                <span class="perf-info">2024.4.12.(화) ~ 2024.5.6(월)  국립극단 명동예술극장</span>
+                            </a>
+                        </div>
+                        <div class="sub06">
+                            <a href="https://www.themusical.co.kr/News/Detail?num=13989" target="_blank">
+                                <img src="./images/poster_frankenstein.jpg" alt="sub-article-poster06">
+                                <strong>뮤지컬 &lt;프랑켄슈타인&gt; 10주년 기념 공연 티저 영상 공개</strong>
+                                <span class="perf-info">2024.6.5.(수) ~ 2024.8.25(일)  블루스퀘어 신한카드홀</span>
+                            </a>
+                        </div>
+                    </div><!-- sub-article02 -->
                 </div><!-- content-area -->
             </div><!-- container -->
         </section><!-- web-magazine -->
@@ -350,14 +375,14 @@
                 <div class="info">
                     <address>클립서비스(주)   대표이사 설도권   주소 서울시 강남구 강남대로 564 6층</address>
                     <p>사업자등록번호 211-86-93404    통신판매업신고 서울강남 2331호</p>
-                    <div class="fax-email"><!-- grid -->
-                        <img src="./images/fax.png" alt="fax">
-                        <p>FAX</p>
-                        <a href="02-3496-8805">02)3496-8805</a>
-                        <img src="./images/email.png" alt="email">
-                        <p>EMAIL</p>
-                        <a href="webmaster@clipservice.co.kr ">webmaster@clipservice.co.kr </a>
-                    </div>
+                    <ul class="fax-email">
+                        <!-- <img src="./images/fax.png" alt="fax"> -->
+                        <li><a href="02-3496-8805">FAX  02)3496-8805</a></li>
+                        
+                        <!-- <img src="./images/email.png" alt="email"> -->
+                        <li><a href="webmaster@clipservice.co.kr ">EMAIL webmaster@clipservice.co.kr </a></li>
+                        
+                    </ul>
                     <p class="copyright">COPYRIGTH &copy; 2007 CLIP SERVICE Inc. ALL Right Reserved</p>
                 </div>
 
