@@ -351,7 +351,6 @@ header {
 /* stage-talk */
 /* talk-box */
 .stage-talk .talk-box {
-    position: relative;
     width: 1276px; height: 432px;
     border-radius: 40px;
     margin: 0 auto;
@@ -364,14 +363,17 @@ header {
 }
 .stage-talk .talkbox-info {
     width: 210px;
+    margin-top: 32px;
 }
 .stage-talk .talkbox-info > h3 {
-    margin-top: 32px;
     font-size: 36px;
     /* font-weight: bold; */
 }
 .stage-talk .talkbox-info > p {
-    margin: 72px 0 40px;
+    margin: 40px 0;
+    color: #6c6c6c;
+    font-size: 20px;
+    letter-spacing: -2px;
 }
 .stage-talk .talkbox-info > a {
     color: #c5d825;
@@ -389,14 +391,14 @@ header {
 }
 .stage-talk .talk-content .hall-list > div {
     width: 360px; height: 142px;
-    border: 1px solid #6c6c6c;
+    border: 1px solid #ececec;
     border-radius: 20px;
 }
 .stage-talk .talk-content .hall-list a {
     position: relative;
     width: 336px; height: 116px;
     margin: 12px;
-    border: 1px solid #6c6c6c;
+    border: 1px solid #ececec;
     border-radius: 10px;
 }
 .stage-talk .talk-content .hall-list img {
@@ -433,7 +435,7 @@ header {
 /*===== footer =====*/ 
 footer {
     position: relative;
-    width: 100%; height: 276px;
+    width: 100%; /* height: 276px; */
     color: #fff;
     background-color: #2b2b2b;
 }
@@ -447,8 +449,6 @@ footer {
 
 /* footer-logo */
 .footer-logo {
-    /* position: absolute;
-    top: 10px; left:0; */
     width: 194px;
     margin-top: 10px;
 }
@@ -466,6 +466,9 @@ footer {
 .footer-menu > ul > li > a {
     color: #fff;
 }
+.footer-menu > ul > li > a:hover {
+    color: #00b7f2;
+}
 
 /* sns */
 .sns {
@@ -478,32 +481,79 @@ footer {
 }
 
 /* info-CS-top */
-.info-CS-top > div {
+.info-CS-top > .container {
     display: flex;
 }
+
 /* info */
 .info {
-    margin-top: 28px;
+    width: 480px;
+    margin: 40px 0 28px;
+    color: #ececec;
     font-size: 14px;
     line-height: 1.8;
 }
 .info > .fax-email {
-    padding-left: 45px;
+    padding: 16px 0;
 }
-.info > .fax-email li a {
+.info > .fax-email li a { /* repeat,사이즈 적용안됨 */
     height: 30px;
     line-height: 30px;
+    padding-left: 40px;
+    color: #fff;
+    font-size: 22px;
 }
-.info > .fax-email li:first-child a{
+.info > .fax-email li:first-child a {
+    background: url(../images/fax.png) no-repeat;
+    background-size: 28px;
+}
+.info > .fax-email li:last-child a {
     background: url(../images/email.png) no-repeat;
-    background-size: cover;
+    background-size: 28px;
 }
-.info img {
-    width: 30px;
+
+/* cs */
+.cs {
+    width: 580px;
+    margin: 72px 0 28px; /* 수정 */
+    display: flex;
+    justify-content: space-between;
+}
+.cs > .cs-info > .cs-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 280px;
+}
+.cs > .cs-info > .cs-btn > a {
+    color: #c5d825;
+    font-size: 22px;
+}
+.cs > .cs-info > .cs-btn > a:first-child {
+    width: 150px;
+    color: #fff;
+    font-size: 24px;
+    background: url(../images/cs.png) no-repeat;
+    background-size: 30px;
+    padding-left: 36px;
+}
+.cs > .cs-info > a {
+    color: #00b7f2;
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.cs > .cs-worktime > p {
+    color: #ececec;
+    font-size: 24px;
+    line-height: 1.25;
+}
+.cs > .cs-worktime > p > .cond {
+    letter-spacing: -0.8px;
 }
 
 .top img {
     width: 40px;
     position: absolute;
-    bottom: 28px; right: 0;
+    bottom: 28px; right: 10px;
 }
