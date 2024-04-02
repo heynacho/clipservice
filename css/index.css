@@ -103,11 +103,14 @@ header {
 }
 .icon > .login {
     position: absolute;
-    top: 20px; right: 42px;
+    top: 20px; right: 44px;
 }
 .icon > .mypage {
     position: absolute;
-    top: 20px; right: 10px;
+    top: 20px; right: 12px;
+}
+.icon > .mypage > a:hover {
+    color: #00b7f2;
 }
 .icon .search-box input {
     position: absolute;
@@ -156,11 +159,29 @@ header {
     font-size: 0;
 }
 .slide > .slide-images {
+    position: relative;
     display: flex;
+    overflow-x: scroll;
+    z-index: 1;
 }
 .slide > .slide-images img {
-    height: 600px;
+    height: 450px;
     margin-right: 12px;
+}
+.slide > .slide-btn {
+    z-index: 99;
+}
+.slide > .slide-btn img {
+    height: 88px;
+}
+.slide > .slide-btn .left-btn {
+    position: absolute;
+    left: 0;
+}
+.slide > .slide-btn .right-btn {
+    position: absolute;
+    right: 0; top:200;
+    z-index: 99;
 }
 
 /* ticket-open */
