@@ -151,37 +151,66 @@ header {
 /*===== main =====*/ 
 /* slide */
 .slide {
-    width: 1180px;
+    position: relative;
+    width: 100%; height: 470px;
     margin: 0 auto;
-    padding-bottom: 48px;
+    margin-bottom: 48px;
 }
 .slide > h2 {
     font-size: 0;
 }
-.slide > .slide-images {
-    position: relative;
+/* slide-images */
+.slide > .slidebox > .slide-images {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: hidden;
     z-index: 1;
 }
-.slide > .slide-images img {
+.slide > .slidebox > .slide-images img {
     height: 450px;
     margin-right: 12px;
 }
-.slide > .slide-btn {
-    z-index: 99;
+
+/* slide-margin */
+.slide > .slidebox > .slide-margin {
+    display: flex;
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    overflow-x: hidden;
+
+    height: 450px;
+    margin: 0 auto;
+    z-index: 2;
 }
-.slide > .slide-btn img {
+.slide > .slidebox > .slide-margin > .left-box,
+.slide > .slidebox > .slide-margin > .right-box {
+    width: 800px;
+    background-color: #ffffffc7;
+}
+.slide > .slidebox > .slide-margin > .visible {
+    width: 1180px;
+}
+
+/* slide-btn */
+
+.slide > .slidebox > .slide-btn {
+    position: absolute;
+    top: 40%; left: 50%;
+    transform: translateX(-50%);
+
+    width: 1180px; height: 88px;
+    margin: 0 auto;
+    z-index: 3;
+    /* background-color: chartreuse; */
+}
+.slide > .slidebox > .slide-btn > .container {
+    width: 1180px; 
+    padding: 0 3px;
+    display: flex;
+    justify-content: space-between;
+}
+.slide > .slidebox > .slide-btn img {
     height: 88px;
-}
-.slide > .slide-btn .left-btn {
-    position: absolute;
-    left: 0;
-}
-.slide > .slide-btn .right-btn {
-    position: absolute;
-    right: 0; top:200;
-    z-index: 99;
 }
 
 /* ticket-open */
