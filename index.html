@@ -69,31 +69,38 @@
         <article class="slide"> <!-- 탈그리드 -->
             <h2>main slide</h2>
             <div class="slidebox">
-                <div class="slide-images">
-                    <a href="#"><img src="./images/poster_dear evan hansen.jpg" alt="main-poster01"></a>
-                    <a href="#"><img src="./images/poster_princess concert.jpg" alt="main-poster02"></a>
-                    <a href="#"><img src="./images/poster_serge exhibition.jpg" alt="main-poster03"></a>
-                    <a href="#"><img src="./images/poster_kennyG(big).jpg" alt="main-poster04"></a>
-                    <a href="#"><img src="./images/poster_mom.jpg" alt="main-poster05"></a>
-                    <a href="#"><img src="./images/poster_hisaishi joe.jpg" alt="main-poster06"></a>
-                </div>
+                
                 <div class="slide-margin">
                     <div class="visible">&nbsp;
                         <div class="left-box">&nbsp;</div>
+                        <div class="slide-images" id="slide-images">
+                        <a href="#"><img src="./images/poster_dear evan hansen.jpg" alt="main-poster01"></a>
+                        <a href="#"><img src="./images/poster_princess concert.jpg" alt="main-poster02"></a>
+                        <a href="#"><img src="./images/poster_serge exhibition.jpg" alt="main-poster03"></a>
+                        <a href="#"><img src="./images/poster_kennyG(big).jpg" alt="main-poster04"></a>
+                        <a href="#"><img src="./images/poster_mom.jpg" alt="main-poster05"></a>
+                        <a href="#"><img src="./images/poster_hisaishi joe.jpg" alt="main-poster06"></a>
+                    </div>
                         <div class="right-box">&nbsp;</div>
                     </div>
                 </div>
-                <!-- <div class="slide-btn">
-                    <div class="container">
-                        <div class="left-btn"><img src="./images/left-arrow.png" alt="left arrow"></div>
-                        <div class="right-btn"><img src="./images/right-arrow.png" alt="right arrow"></div>
-                    </div>
-                </div>
-                <div class="slide-bar">
-                    <div class="bar-total">&nbsp;</div>
-                    <div class="bar-selected">&nbsp;</div>
-                </div> -->
             </div><!-- slidebox -->
+
+            <script>
+                // window.onload
+                function slideImage() {
+                    let slideLeft = document.getElementById('slide-images');
+                    slideLeft.style.transition = 'transform 0.5s';
+                    slideLeft.style.transform = 'translateX(-327px)';
+                    setTimeout(function() {
+                        slideLeft.appendChild(slideLeft.querySelector('a:first-child'));
+                        slideLeft.style.transition = 'none';
+                        slideLeft.style.transform = 'translateX(0)';
+                    }, 3500);
+                }
+                
+                setInterval(slideImage, 3000);
+            </script>
         </article><!-- slide -->
         
         <section class="ticket-open">
